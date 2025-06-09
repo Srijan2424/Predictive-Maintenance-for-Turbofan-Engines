@@ -1,4 +1,5 @@
 🚀 Predictive Maintenance for Turbofan Engines
+
 This project implements a comprehensive predictive maintenance framework for turbofan engines, leveraging machine learning to predict engine degradation, estimate Remaining Useful Life (RUL), and calculate a dynamic risk score. By integrating various analytical phases—from data preprocessing and clustering to advanced regression and risk assessment—this system aims to enhance operational efficiency and prevent unexpected failures.
 
 ✨ Features
