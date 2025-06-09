@@ -20,11 +20,9 @@ Insightful Visualizations: Generates plots to visualize degradation stages and o
 The project is structured into modular phases, each handled by dedicated Python classes:
 
 Phase 0: Data Preprocessing (Pre class)
-
 This class is the entry point for all raw data. It loads and cleans CMaps datasets, preparing them specifically for either clustering or regression tasks. It handles different data combinations (e.g., all datasets for general clustering, specific combinations for targeted clustering or regression).
 
 Phase 1: Engine Degradation Clustering (A, B, C classes)
-
 This phase focuses on identifying and categorizing distinct operational and degradation states of the engines.
 
 A class: Performs clustering across all combined CMaps datasets, providing a holistic view of engine health.
@@ -32,11 +30,9 @@ B class: Specializes in clustering data from FD001 and FD003 (constant operation
 C class: Handles clustering for FD002 and FD004 (varying operational conditions), adapting to the complexities introduced by dynamic operational parameters. Each clustering class employs data normalization, Principal Component Analysis (PCA) for visualization, and maps clusters to meaningful degradation stages (0-4).
 
 Phase 2: Failure Probability Prediction (Two class)
-
 (As observed from the risk_score_calculator usage) This module is responsible for calculating the failure probability of each engine. Its output (unit_number and failure_probability) is a critical input for the final risk assessment.
 
 Phase 3: Remaining Useful Life (RUL) Prediction (Three class)
-
 This is where the predictive power for RUL comes to life. The Three class:
 
 Preprocesses data by normalizing operational settings and calculating rolling mean and standard deviation for sensor features.
@@ -47,7 +43,6 @@ Estimates cycles until an engine enters the next degradation stage.
 Evaluates performance using Root Mean Squared Error (RMSE).
 
 Phase 4: Risk Score Calculation & Visualization
-
 The final phase brings it all together. The risk_score_calculator function merges the failure probability (from Phase 2) and predicted RUL (from Phase 3). It then calculates a normalized risk score for each engine, providing a unified metric for maintenance prioritization. A bar chart visually represents these risk scores, highlighting high-risk engines against a defined threshold.
 
 💻 Technologies Used
